@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --font-mykhmer: "Kantumruy Pro", sans-serif;
+    --font-myenglish: "Poppins", sans-serif;
+}

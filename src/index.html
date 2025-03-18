@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        #container > div
+        {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header class="w-[100%] h-[60px] flex justify-center bg-black text-white">
+        <nav class="w-[96%] h-[100%] flex items-center justify-between">
+            <h1>Logo</h1>
+            <ul class="flex w-[20%] h-[100%] items-center justify-between font-bold">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <header class="bg-gray-200 p-5">
+        <nav class="flex w-[90%] m-auto justify-between items-center">
+            <div class="w-[40px] h-[40px]">
+                <img class="w-full h-full rounded-full object-cover" src="https://img.pikbest.com/png-images/20241031/roaring-lion-logo-design_11033155.png!sw800" alt="">
+            </div>
+            <!-- responsive for mb or above -->
+            <div class="hidden md:block">
+                <ul class="flex space-x-5">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>    
+            <!-- responsive for sm or below  -->
+            <div class="relative inline-block text-left md:hidden">
+                <div>
+                  <button type="button" id="menu-button" class="inline-flex w-[50px] justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                </div>
+              
+                <div id="dropdown-menu" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 shadow-lg ring-black/5">
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Archive</a>
+                  </div>
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Share</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Add to favorites</a>
+                  </div>
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Delete</a>
+                  </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="container" class="w-[90%] grid grid-cols-3 gap-4 mt-10 m-auto">
+        <div class="col-span-2">1</div>
+        <div class="">2</div>
+        <div class="">3</div>
+        <div class="col-span-2 row-span-2">4</div>
+        <div class="col-span-full">5</div>
+    </main>  
+</body>
+</html>
+<script>
+    const button = document.getElementById('menu-button');
+    const dropdown = document.getElementById('dropdown-menu');
+  
+    button.addEventListener('click', () => {
+      dropdown.classList.toggle('hidden');
+    });
+  
+    document.addEventListener('click', (event) => {
+      if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+</script>
